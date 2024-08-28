@@ -118,6 +118,7 @@ var MainCanvasSketch = function(p){
     localStorage.setItem('Density', selectedValue);
     window.location.reload()
     });
+    localStorage.setItem('selectedValue', selectedValue);
     sizeSelection.option(16)
     sizeSelection.option(10)
     sizeSelection.option(8)
@@ -125,7 +126,7 @@ var MainCanvasSketch = function(p){
     sizeSelection.option(4)
     sizeSelection.option(2)
     sizeSelection.selected(localStorage.getItem('Density'))
-   // localStorage.setItem('selectedValue', selectedValue);
+     
     size = Number(sizeSelection.selected());
 
     //STYLING-BUTTON
