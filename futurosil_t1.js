@@ -114,6 +114,7 @@ var MainCanvasSketch = function(p){
     var mySelect = document.getElementById('Density')
     mySelect.addEventListener('change', function () {
     var selectedValue = mySelect.value;
+    localStorage.setItem('Density', 10);
     localStorage.setItem('Density', selectedValue);
     window.location.reload()
     });
