@@ -117,12 +117,18 @@ var MainCanvasSketch = function(p){
     localStorage.setItem('Density', selectedValue);
     window.location.reload()
     });
-    window.onload = function () {
-      if (localStorage.getItem("hasCodeRunBefore") === null) {
-          localStorage.setItem('Density', 10);
-          localStorage.setItem("hasCodeRunBefore", true);
-      }
-    }
+    
+   window.onload = (event) => {
+      console.log("page is fully loaded");
+      if (!('hasCodeRunBefore' in localStorage)) {
+        localStorage.setItem('Density', 10);
+        console.log("HALO")
+        d = d+1;
+        localStorage.setItem("hasCodeRunBefore", true);
+    }else{console.log("WRONG")}
+    };
+    window.onload() 
+    
     sizeSelection.option(16)
     sizeSelection.option(10)
     sizeSelection.option(8)
