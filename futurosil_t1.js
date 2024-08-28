@@ -123,7 +123,6 @@ var MainCanvasSketch = function(p){
       if (!('hasCodeRunBefore' in localStorage)) {
         localStorage.setItem('Density', 10);
         console.log("HALO")
-        d = d+1;
         localStorage.setItem("hasCodeRunBefore", true);
     }else{console.log("WRONG")}
     };
