@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="p5\lib\p5.js"></script>
+    <script src="p5.svg.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script defer src=http://CDN.JSDelivr.net/npm/mathjs/lib/browser/math.js></script>
+    <script defer src=futurosil_t1.js></script>
+    <script defer src=RDCAGraph.js></script>
+    <script defer src=maingui.js></script>
+    <script defer src=futurosil3D_V1.js></script>
+    <script defer src=futurosilPattern.js></script>
+    <!--  <script src="scriptLoader.js"></script>-->
+    <script defer src=MultiAutomataInterface.js></script>
+    <script defer src=RDMCAFunctions_v1.js></script>
+    <script defer src=tutorialslider.js></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Fussil</title> 
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="Introduction">
+        <div id="Intro">
+            <div id="IntroName">
+                <div id="TextIntroName">Welcome to Fussil Beta V.1</div>
+            </div>
+            <div id="IntroBody">
+                <div id="IntroBody01">
+                    <div id="Body01Main" class="BigText">The program you are about to experience is currently in beta testing phase. <br><br> Please be aware that you may experience bugs and many experimental results. <br><br> In any case of a bug, please refresh the page.</div>
+                    <div id="Body02Main" class="SmallText">The Fussil Program is made as an experimental program of a master thesis: “Fussil Design, Cellular automation of cohesion between nature and algorithms”, done at Academy of Fine Arts and Design in Ljubljana. The project is a two year experimental study on algorithms and nature done by Strahinja Jovanović.</div>
+                </div>
+                <div id="IntroBody02">
+                    <div id="Body03Main" class="SmallText">The central focus of the master’s thesis is research into the elementary elements of nature, cellular automata and their influence on design processes. Through practical experiments and a theoretical research of various cellular automata, a new design tool is created that serves to create with nature and enables the implementation of newly created artifacts in various spheres of design. The new cellular automata that are created in the process are called fussils, from the Latin words fossus (excavated) and futurus (about to be, future). <br><br> The fundamental principle for creating and evaluating research is creative programming, which I also use for experiments and the realization of design tools.<br><br> The results and their design artefacts are presented in an analogue and digital environment, which also shows the large range of patterns and shapes created in the new tool.<br><br> With the cohesion of nature and algorithm, I want to contribute to the development of new visual systems and design processes. These processes are a key part of understanding nature as a key factor in shaping new practices and artefacts of  the future.</div>
+                </div>
+            </div>
+            <div id="IntroButtons">
+                <div id="CloseButton" class="IntroButtons" onclick="ExitTutorial()">Close</div>
+                <div id="TutorialButton" class="IntroButtons" onclick="OpenTutorial()">Tutorial</div>
+            </div>
+        </div>
+        <div id="Tutorial" class="slideshow-container">
+            <div class="DotContainer">
+                <span class="dot" onclick="currentSlide(1)">1</span>
+                <span class="dot" onclick="currentSlide(2)">2</span>
+                <span class="dot" onclick="currentSlide(3)">3</span>
+                <span class="dot" onclick="currentSlide(4)">4</span>
+                <span class="dot" onclick="currentSlide(5)">5</span>
+                <span class="dot" onclick="currentSlide(6)">6</span>
+                <span class="dot" onclick="currentSlide(7)">7</span>
+                <span class="dot" onclick="currentSlide(8)">8</span>
+                <span class="dot" onclick="currentSlide(9)">9</span>
+                <span class="dot" onclick="currentSlide(10)">10</span>
+                <span class="dot" onclick="currentSlide(11)">11</span>
+                <span class="dot" onclick="currentSlide(12)">12</span>
+                <span class="dot" onclick="currentSlide(13)">13</span>
+                <span class="dot" onclick="currentSlide(14)">14</span>
+                <span class="dot" onclick="currentSlide(15)">15</span>
+            </div>
+            <a id="ArrowLeft" class="Arrow" onclick="plusSlides(-1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="40" viewBox="0 0 21 40" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 34.9844C11 32.223 13.2386 29.9844 16 29.9844C18.7614 29.9844 21 32.223 21 34.9844C21 37.7458 18.7614 39.9844 16 39.9844C13.2386 39.9844 11 37.7458 11 34.9844ZM6 26C6 23.7909 7.79086 22 10 22C12.2091 22 14 23.7909 14 26C14 28.2091 12.2091 30 10 30C7.79086 30 6 28.2091 6 26ZM3 17C1.34315 17 1.89194e-06 18.3431 1.74709e-06 20C1.60224e-06 21.6569 1.34315 23 3 23C4.65686 23 6 21.6569 6 20C6 18.3431 4.65686 17 3 17ZM6 14C6 11.7909 7.79086 10 10 10C12.2091 10 14 11.7909 14 14C14 16.2091 12.2091 18 10 18C7.79086 18 6 16.2091 6 14ZM16 0.0156246C13.2386 0.0156243 11 2.2542 11 5.01562C11 7.77705 13.2386 10.0156 16 10.0156C18.7614 10.0156 21 7.77705 21 5.01562C21 2.2542 18.7614 0.0156248 16 0.0156246Z" fill="#D9D9D9"/>
+                </svg>
+                </a>
+        <!-- First SLIDE -->
+                <div id="MainTutorialWrap" class="mySlides fade">
+                    <div id="TutorialName">01: Let’s start!</div>
+                    <div id="TutorialImage">
+                        <div id="ImageTutorial">
+                            <img src="Tutorial_Gif/Tut01.gif">
+                        </div>
+                    </div>
+                    <div id="TutorialDesc">To start exploring, click at the middle of the canvas and create a simple organism. You can also hold your mouse and while pressing to draw on the board.<br><br> Different shapes may appear, depending on how much you have pressed the mouse.</div>
+                </div>
+        <!-- First SLIDE -->
+        <!-- Second SLIDE -->
+                <div id="MainTutorialWrap" class="mySlides fade">
+                    <div id="TutorialName">02: Be careful!</div>
+                    <div id="TutorialImage">
+                        <div id="ImageTutorial">
+                            <img src="Tutorial_Gif/Tut02.gif">
+                        </div>
+                    </div>
+                    <div id="TutorialDesc">Be careful, not to touch the edge of the canvas! There are current bugs with the edge of the canvas, therefore if you suddenly press it, be sure to refresh the page!</div>
+                </div>
+        <!-- Second SLIDE -->
+        <!-- Third SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">03: Experiment with Diffusion </div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut03.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">To start playing with the cellular automata, try changing the diffusion, reaction and expansion rates. <br><br> You will see a direct response on the canvas and how your cellular automata is reacting. <br><br> The current version support 4 different types of cellular automata, and also their different reaction-diffusion states.</div>
+            </div>
+        <!-- Third SLIDE -->
+        <!-- 4 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">04: Change color!</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut04.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">You can also manipulate the color of the cells for each different cellular automata you create. <br><br> This can help you distinguish them easier and create a more vivid experiment.</div>
+            </div>
+        <!-- 4 SLIDE -->
+            <!-- 5 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">05: Create a reaction! </div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut05.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">Different types of fussils can also react between themselves. Drag and drop to form a connection between them and see the reaction on canvas. <br><br> The reaction system supports more reactions with one automata. However, be aware that these procceses can take a lot of memory.</div>
+            </div>
+        <!-- 5 SLIDE -->
+        <!-- 6 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">06: Remove reaction</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut06.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">When you are done with your reaction, you can also remove it, by drag and drop on the reaction that you firstly created. <br><br> This will remove any reaction between the different types, therefore causing one to prevail.</div>
+            </div>
+        <!-- 6 SLIDE -->
+        <!-- 7 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">07: The Cell System </div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut07.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">The Cell System is currently in the making. Here are some examinations on how you can manipulate the cell of the organism.<br><br> The inner circle is the control of its outer structure, the membrane. In case, where the inner circle is touching the outer, the membrane is strongly reacting with is surface. The outer circle represents the inner shell of the cell. By changing it, we can manipulate the reaction of membrane and inner parts of the cell</div>
+            </div>
+        <!-- 7 SLIDE -->
+        <!-- 8 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">08: Outer and Inner Ring </div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut08.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">Outer and Inner ring define the intensity of particular part of the cell. By changing the outer ring, we are manipulating the intensity of the membrane and its reaction. <br><br> By manipulating the inner ring, we are changing the intenisty of the inner structre of cell. <br><br>This can lead to very experimental results, still in the process of reaserch</div>
+            </div>
+        <!-- 8 SLIDE -->
+        <!-- 9 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">09: Be careful!</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut09.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">The changes can lead to very interesting, tripping and psyhodelic graphics. To avoid it try not to keep the balance between outer in inner ring.</div>
+            </div>
+        <!-- 9 SLIDE -->
+        <!-- 10 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">10: Play, Stop and Color</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut10.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">The Fussil tool allows you also to stop the animtion of the automata. This can help you observe the automata at a certain moment, or help you decide further steps. <br><br> With pressing play button again, the automata will further develop on the canvas. <br><br> Nevertheless, the tool also offers you to change the color of the background. This way you can fully customise the look of your fussils.</div>
+            </div>
+        <!-- 10 SLIDE -->
+        <!-- 11 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">11: Play with other grids!</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut11.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">The main menu also gives you a chanche to explore different densities of cells. By clicking on the number, you can upscale or downscale your grid. <br><br> However, be aware that the densier the grid is, the more memory it consumes. This is why they can be very slow.</div>
+            </div>
+        <!-- 11 SLIDE -->
+        <!-- 12 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">12: Try the Fussil Grid</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut12.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">The Fussil Grid lets you explore your experiments in form of a modular grid. By clicking you can add your graphics to the grid. If you click again on the cell, where the grpahic is applied, you will be able to rotate the canvas. <br><br> If you want to delete the graphic, hold "D" on the keyboard and click on the cell that you would like to remove.</div>
+            </div>
+        <!-- 12 SLIDE -->
+        <!-- 13 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">13: Explore the evolution!</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut13.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">By clicking on slider "Frames", you can explore how your cellular automata has evolved over time. Be aware, to be able to do this, you need to stop the progres of animation. The canvas will automatically update once the button is pressed again. <br><br> You can also zoom in and out the grid, and change the number of cells, by drag and drop on buttons "+".</div>
+            </div>
+        <!-- 13 SLIDE -->
+        <!-- 14 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">14: Observe them in 3D!</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut14.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">By each frame the cells take, a layer of points is being created in 3D system. Creating the fussils in space. <br><br> This system creates point cloud structres that you can get by clicking "Save" button. <br><br> The files that you can get are tables of points, that can be used in Rhino Grasshopper to create 3D model.</div>
+            </div>
+        <!-- 14 SLIDE -->
+        <!-- 15 SLIDE -->
+            <div id="MainTutorialWrap" class="mySlides fade">
+                <div id="TutorialName">15: Make a selection</div>
+                <div id="TutorialImage">
+                    <div id="ImageTutorial">
+                        <img src="Tutorial_Gif/Tut15.gif">
+                    </div>
+                </div>
+                <div id="TutorialDesc">If you are not interested in the whole part of the object you are creating, you can always select the parts that you would like to work on. <br><br>The sliders provided in the main menu, provide the option to select the upper and lower limit of the structrue. By clicking "space" button, you can view only the part that you would like to have. </div>
+            </div>
+        <!-- 15 SLIDE -->
+        <a id="ArrowRight" class="Arrow" onclick="plusSlides(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="40" viewBox="0 0 21 40" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.01562C10 7.77705 7.76142 10.0156 5 10.0156C2.23858 10.0156 0 7.77705 0 5.01562C0 2.2542 2.23858 0.015625 5 0.015625C7.76142 0.015625 10 2.2542 10 5.01562ZM15 14C15 16.2091 13.2091 18 11 18C8.79086 18 7 16.2091 7 14C7 11.7909 8.79086 10 11 10C13.2091 10 15 11.7909 15 14ZM18 23C19.6569 23 21 21.6569 21 20C21 18.3431 19.6569 17 18 17C16.3431 17 15 18.3431 15 20C15 21.6569 16.3431 23 18 23ZM15 26C15 28.2091 13.2091 30 11 30C8.79086 30 7 28.2091 7 26C7 23.7909 8.79086 22 11 22C13.2091 22 15 23.7909 15 26ZM5 39.9844C7.76142 39.9844 10 37.7458 10 34.9844C10 32.2229 7.76142 29.9844 5 29.9844C2.23858 29.9844 0 32.2229 0 34.9844C0 37.7458 2.23858 39.9844 5 39.9844Z" fill="#D9D9D9"/>
+            </svg>
+        </a>
+        <div id="XButton" class="ExitButton" onclick="ExitTutorial()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.81934 6.47559C5.47619 6.47559 6.81934 5.13244 6.81934 3.47559C6.81934 1.81873 5.47619 0.475586 3.81934 0.475586C2.16248 0.475586 0.819336 1.81873 0.819336 3.47559C0.819336 5.13244 2.16248 6.47559 3.81934 6.47559ZM12.1807 7C13.8375 7 15.1807 5.65685 15.1807 4C15.1807 2.34315 13.8375 1 12.1807 1C10.5238 1 9.18066 2.34315 9.18066 4C9.18066 5.65685 10.5238 7 12.1807 7ZM10.8545 8.52832C10.8545 10.1852 9.51135 11.5283 7.85449 11.5283C6.19764 11.5283 4.85449 10.1852 4.85449 8.52832C4.85449 6.87147 6.19764 5.52832 7.85449 5.52832C9.51135 5.52832 10.8545 6.87147 10.8545 8.52832ZM14.8193 13.5244C14.8193 15.1813 13.4762 16.5244 11.8193 16.5244C10.1625 16.5244 8.81934 15.1813 8.81934 13.5244C8.81934 11.8676 10.1625 10.5244 11.8193 10.5244C13.4762 10.5244 14.8193 11.8676 14.8193 13.5244ZM6.81934 13.5029C6.81934 15.1598 5.47619 16.5029 3.81934 16.5029C2.16248 16.5029 0.819336 15.1598 0.819336 13.5029C0.819336 11.8461 2.16248 10.5029 3.81934 10.5029C5.47619 10.5029 6.81934 11.8461 6.81934 13.5029Z" fill="#D9D9D9"/>
+                </svg>
+        </div>
+    </div>
+    </div>
+    <div id="System">
+        <div id="NavBar">
+            <img src = "Fussil_logo_02.svg" alt="My Happy SVG"/>
+            <div id="TutorialButtonMainMenu" class="MainMenuButton fade" onclick="OpenTutorial()">Tutorial</div>
+        </div>
+    <div id="MainSystem">
+                    <div id="WrapGUILeft">
+                        <div id="TestGUI"></div></div>
+                    <div id="MainGUI">
+                        <div id="Test" style="display: flex;"></div>
+                        <div id="Test3D" style="position: relative; top: 0px; left:0%; width:1500px; height:auto;"></div>
+                        <div id="TestGrid" style="position: relative; top: 0px; left:0%; width:auto; height:700px;"></div>
+                    </div>
+                        <div id="WrapGUIRight"><div id="TestGUIRight">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

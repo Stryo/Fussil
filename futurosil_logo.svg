@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.46 283.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="121.3" cy="202.81" r="20.46"/>
+  <circle class="cls-1" cx="80.37" cy="243.74" r="20.46"/>
+  <circle class="cls-1" cx="121.3" cy="161.88" r="20.46"/>
+  <circle class="cls-1" cx="121.3" cy="120.96" r="20.46"/>
+  <circle class="cls-1" cx="121.3" cy="80.03" r="20.46"/>
+  <circle class="cls-1" cx="162.22" cy="120.96" r="20.46"/>
+  <circle class="cls-1" cx="80.37" cy="120.96" r="20.46"/>
+  <circle class="cls-1" cx="162.22" cy="39.1" r="20.46"/>
+  <circle class="cls-1" cx="203.15" cy="39.1" r="20.46"/>
+</svg>

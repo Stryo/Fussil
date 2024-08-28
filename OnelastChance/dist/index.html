@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Three.js + delaunator (Delaunay triangulation)</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="points_03.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.152.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.152.0/examples/jsm/"
+    }
+  }
+</script>
+
+<!-- https://github.com/mapbox/delaunator -->
+<script src="https://unpkg.com/delaunator@3.0.2/delaunator.js"></script>
+
+<script src="https://josephg.github.io/noisejs/perlin.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.3/dat.gui.min.js"></script>
+
+<div id="info">
+   <a href="https://github.com/mapbox/delaunator" target="blank">Delaunator<br>(triangulation)</a> 
+</div>
+<!-- partial -->
+  <script type="module" src="./script_v2.js"></script>
+
+</body>
+</html>
