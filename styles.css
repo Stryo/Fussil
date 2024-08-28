@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Neue Montreal;
+    src: url(FussilFont/NeueMontreal-Regular.ttf);
+  }
+  @font-face {
+    font-family: Neue MontrealBold;
+    src: url(FussilFont/NeueMontreal-Bold.ttf);
+    font-weight: bold;
+  }
+
 body{
     font-family: "Neue Montreal", sans-serif;
     font-optical-sizing: auto;
@@ -452,7 +462,7 @@ align-items: flex-start;
 #TextIntroName{
     width: 580px;
     color: #000;
-    font-family: "Neue Montreal";
+    font-family: "Neue MontrealBold";
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
