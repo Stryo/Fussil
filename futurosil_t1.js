@@ -117,7 +117,12 @@ var MainCanvasSketch = function(p){
     localStorage.setItem('Density', selectedValue);
     window.location.reload()
     });
-    localStorage.setItem('Density', 10);
+    window.onload = function () {
+      if (localStorage.getItem("hasCodeRunBefore") === null) {
+          localStorage.setItem('Density', 10);
+          localStorage.setItem("hasCodeRunBefore", true);
+      }
+    }
     sizeSelection.option(16)
     sizeSelection.option(10)
     sizeSelection.option(8)
